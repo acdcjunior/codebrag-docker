@@ -1,5 +1,5 @@
 FROM java:8-jdk
-MAINTAINER mkroli@yahoo.de
+MAINTAINER acdcjunior@gmail (original author: mkroli@yahoo.de)
 
 ENV CODEBRAG_TAG=master
 
@@ -7,7 +7,7 @@ RUN apt-get update && \
     apt-get -y install nodejs npm git && \
     apt-get clean && \
     update-alternatives --install /usr/bin/node node /usr/bin/nodejs 0 && \
-    git clone https://github.com/softwaremill/codebrag.git /tmp/codebrag && \
+    git clone https://github.com/acdcjunior/codebrag.git /tmp/codebrag && \
     cd /tmp/codebrag && \
     git checkout ${CODEBRAG_TAG} && \
     java -XX:MaxPermSize=1024m -jar sbt-launch.jar clean codebrag-ui/compile codebrag-dist/assembly && \
