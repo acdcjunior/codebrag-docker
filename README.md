@@ -7,6 +7,9 @@ To start:
 docker run --name codebrag -d --restart=always -p 80:8080 -v PATH_TO_REPOSITORIES:/repos -v PATH_TO_H2_FOLDER:/opt/codebrag/data acdcjunior/codebrag-modified
 ```
 
+To edit the database:
+-----
+
 To edit the database, **STOP the `codebrag` container**, and:
 
 ```bash
